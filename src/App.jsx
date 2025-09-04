@@ -49,7 +49,7 @@ useEffect(() => {
 
   return (
     <UserBackpack.Provider value={{apidata,getApiData,favourite,getFavourite}}>
-      <BrowserRouter>
+      <BrowserRouter basename="/Movie_explorer">
       <Routes>
         <Route path="/" index exact element={<Home/>} />
         <Route path="/favourite" element={<Favourite/>}/> 
