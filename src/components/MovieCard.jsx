@@ -16,15 +16,15 @@ const MovieCard = ({data}) => {
       
 {data.apidata&&data.apidata.length>0?(
   data.apidata.map((card,i)=>(
-    <Link to={`/movies/${card.id}`} key={i} className='p-3 m-5 border-2 bg-green-400/10 rounded-xl cursor-pointer hover:shadow-lg transition block' >
+    <Link to={`/movies/${card.rank}`} key={i} className='p-3 m-5 border-2 bg-green-400/10 rounded-xl cursor-pointer hover:shadow-lg transition block' >
       
         <button  onClick={(e)=>{
           e.preventDefault();
-          toogleFavourite(card.id)} }>
-            {data.favourite.includes(card.id)?"💖":"💔" }</button>
-          <img  src={card.primaryImage || girl } alt={card.primaryTitle} />
-          <h1>{card.primaryTitle}</h1>
-          <p>year:{card.startYear}</p>
+          toogleFavourite(card.rank)} }>
+            {data.favourite.includes(card.rank)?"💖":"💔" }</button>
+          <img  src={card.image||girl} alt={card.title} />
+          <h1>{card.title}</h1>
+          <p>year:{card.year}</p>
       </Link>
     ))
 ):(

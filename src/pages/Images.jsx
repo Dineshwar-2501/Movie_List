@@ -14,8 +14,8 @@ const Images = () => {
       <div className=' grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 p-3 '>
         {apidata.map((item, i) => (
           <div key={i}>
-            <img src={item.primaryImage || girl} alt={item.primaryTitle} />
-            <a href={item.primaryImage || girl} download={item.primaryTitle}>
+            <img src={item.image || girl} alt={item.title} />
+            <a href={item.image || girl} download={item.title}>
               <button className='bg-gray-500/10 p-2 m-2 rounded-xl border-2'>Download</button>
             </a>
           </div>

@@ -37,7 +37,7 @@ useEffect(() => {
         const response = await fetch(url, options);
         const result = await response.json();
         console.log(result);
-        getApiData(result.results);
+        getApiData(result);
       } catch (error) {
         console.error(error);
       }
@@ -53,7 +53,7 @@ useEffect(() => {
       <Routes>
         <Route path="/" index exact element={<Home/>} />
         <Route path="/favourite" element={<Favourite/>}/> 
-        <Route path="/movies/:id" element={<MovieDetail/>} />
+        <Route path="/movies/:rank" element={<MovieDetail/>} />
         <Route path="/images" element={<Images/>} />
         <Route  path="*" element={<Error/>} />
       </Routes>
